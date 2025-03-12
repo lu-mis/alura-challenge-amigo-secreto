@@ -4,5 +4,11 @@ let amigos = []
 
 function adicionarAmigo() {
     amigos = document.querySelector('input').value;
-    console.log(amigos);
+    console.log(amigos)
+    limparCampo()
+}
+
+function limparCampo() {
+    amigos = document.querySelector('input');
+    amigos.value = '';
 }
