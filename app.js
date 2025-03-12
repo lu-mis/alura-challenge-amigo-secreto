@@ -3,9 +3,17 @@
 let amigos = []
 
 function adicionarAmigo() {
-    amigos = document.querySelector('input').value;
-    console.log(amigos)
-    limparCampo()
+    let digitado = document.querySelector('input').value;
+    
+    if (digitado == '') {
+        console.log(digitado);
+        alert("Por favor, insira um nome.");
+    } else {
+        amigos.push(digitado);
+        console.log(amigos);
+    }
+    
+    limparCampo();
 }
 
 function limparCampo() {
