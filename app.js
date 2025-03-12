@@ -2,6 +2,7 @@
 
 let amigos = [];
 let digitado;
+let numeroDeAmigos;
 
 function adicionarAmigo() {
     digitado = document.querySelector('input').value;
@@ -18,11 +19,15 @@ function adicionarAmigo() {
 }
 
 function sortearAmigo() {
-    numeroDeAmigos = amigos.length;
-    selecionado = parseInt(Math.random() * numeroDeAmigos);
-    console.log(selecionado)
-    console.log(amigos[selecionado]);
-    alert(`O amigo escolhido foi: ${amigos[selecionado]}`);
+    if (amigos == undefined) {
+        numeroDeAmigos = amigos.length;
+        selecionado = parseInt(Math.random() * numeroDeAmigos);
+        console.log(selecionado);
+        console.log(amigos[selecionado]);
+        alert(`O amigo escolhido foi: ${amigos[selecionado]}`);
+    } else {
+        alert("Por favor, insira um nome.");
+    }
 }
 
 function limparCampo() {
