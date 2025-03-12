@@ -20,13 +20,13 @@ function adicionarAmigo() {
 
 function sortearAmigo() {
     if (amigos == undefined) {
+        alert("Por favor, insira um nome.");
+    } else {
         numeroDeAmigos = amigos.length;
         selecionado = parseInt(Math.random() * numeroDeAmigos);
         console.log(selecionado);
         console.log(amigos[selecionado]);
         alert(`O amigo escolhido foi: ${amigos[selecionado]}`);
-    } else {
-        alert("Por favor, insira um nome.");
     }
 }
 
